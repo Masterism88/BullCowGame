@@ -3,14 +3,17 @@
 
 class FBullCowGame {
 public:
+	FBullCowGame(); //Constructor
+	int GetMaxTries() const;
+	int GetCurrentTry() const;
+	bool IsGameWone() const;
+
 	void Reset(); //TODO make a more rich return value
-	int GetMaxTries();
-	int GetCurrentTry();
-	bool IsGameWone();
 	bool CheckGuessValidity(std::string); //TODO make a more rich return value
 	
 
 private:
-	int MyCurrentTry = 1;
-	int MyMaxTries = 5;
+	// See constuctor for initalisation 
+	int MyCurrentTry;
+	int MyMaxTries;
 };
